@@ -21,97 +21,94 @@ sudo mandb
 2. Packages for working with `wslg` (Windows Subsystem For Linux GUI)
 
 ```sh
-# These packages HAVE to be installed with pacman in order to work properly!
 sudo pacman -S pkgconf dbus gtk3 libsoup webkit2gtk alsa-lib tk
 ```
 
-3. `git clone` this repo
+3. Generate ssh key
 
 ```sh
-# Use SSH if you can...
-git clone git@github.com:marechal-dev/dotfiles.git
-
-# Or use HTTPS at least!
-git clone https://github.com/marechal-dev/dotfiles.git
+ssh-keygen -t ed25519 -C "email"
 ```
 
-4. Execute the `setup.sh` to create the symlinks
+4. `git clone` this repo
+
+```sh
+git clone git@github.com:marechal-dev/dotfiles.git .dotfiles
+```
+
+5. Execute the `setup.sh` to create the symlinks
 
 ```sh
 ./.dotfiles/setup.sh
 ```
 
-5. Install `yay`
+6. Install `yay`
 
 ```sh
-cd /tmp \
-git clone https://aur.archlinux.org/yay.git \
-cd yay \
-makepkg -si \
+cd /tmp
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 cd
 ```
 
-6. Install `zsh`
+7. Install `zsh`
 
 ```sh
-sudo yay -S zsh
+yay -S zsh
 ```
 
-7. Install `zsh-autosuggestions`
+8. Add `/usr/sbin/zsh` to `/etc/shells` if not already there
+
+9. Set `zsh` as default shell
 
 ```sh
-cd \
-mkdir .zsh \
+chsh -s $(which zsh)
+```
+
+10. Install `zsh-autosuggestions`
+
+```sh
+cd
+mkdir .zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 ```
 
-8. Install `asdf`
+11. Install `oh-my-zsh`
 
 ```sh
-cd \
-yay -S asdf-vm
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-
-9. Install `ruby` prerequirements
-
-```sh
-yay -S libyaml
-```
-
-10. Install `php` prerequirements
-
-```sh
-yay -S autoconf bison gettext gd libcurl-openssl-1.0 libedit icu libjpeg-turbo libmysqlclient libogg oniguruma libpng postgresql-libs readline sqlite openssl libxml2 libzip re2c zlib freetype2 automake krb5 libiconv
-```
-
-9. Install languages prerequirements
-
-```sh
-chmod +x .dotfiles/install_asdf_plugins.sh && .dotfiles/install_asdf_plugins.sh
-```
-
-10. Install `asdf` plugins
-
-```sh
-chmod +x .dotfiles/install_asdf_plugins.sh && .dotfiles/install_asdf_plugins
-```
-
-11. Install latest LTS version of the languages (use `asdf list all <plugin-name>` to list versions)
 
 12. Install utils
 
 ```sh
-sudo yay -S bat eza broot fd ripgrep httpie jq tlrc-bin lazydocker lazygit kdash gdb navi task
+yay -S bat eza broot fd ripgrep httpie jq tlrc-bin lazydocker lazygit gdb navi task fastfetch fzf zoxide fd
 ```
 
-13. Install `gdb-dashboard`
+13. Create directory structure
 
 ```sh
-wget -P ~ https://github.com/cyrus-and/gdb-dashboard/raw/master/.gdbinit
+chmod +x .dotfiles/create_dir_struct.sh && .dotfiles/create_dir_struct.sh
 ```
 
-14. Install `pygments` for `gdb-dashboard`
+14. Install `mise`
 
 ```sh
-pip install pygments
+curl https://mise.run/zsh | sh
+```
+
+15. Install languages prerequirements
+
+```sh
+chmod +x .dotfiles/install_langs_reqs.sh && .dotfiles/install_langs_reqs.sh
+```
+
+16. Install latest LTS version of the languages (use `asdf list all <plugin-name>` to list versions)
+
+17. Install `lazyvim`
+
+```sh
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
 ```

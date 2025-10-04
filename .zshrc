@@ -32,16 +32,26 @@ fi
 export PROMPT_EOL_MARK=''
 
 # Personal Aliases
+alias .="cd .."
+alias ..="cd ../.."
+alias ...="cd ../../.."
+alias ....="cd ../../../.."
+alias .....="cd ../../../../.."
+
 alias zshconfig="nvim $HOME/.zshrc"
 alias winhere="explorer.exe ."
-alias dev="cd $HOME/Dev"
-alias src="cd $HOME/Dev/Source"
-alias me="cd $HOME/Dev/Source/Personal"
-alias job="cd $HOME/Dev/Source/Professional"
-alias learn="cd $HOME/Dev/Source/Learning"
 alias bls="eza --color=always --icons=always --long --git --all --no-user"
 alias wttrpoa="curl wttr.in/Porto+Alegre,Brazil"
 alias wttrrg="curl wttr.in/Rio+Grande,Brazil"
+
+alias dev="cd ~/dev"
+alias med="cd ~/dev/personal"
+alias aed="cd ~/dev/academic"
+alias ped="cd ~/dev/professional"
+alias ufrgs="cd ~/dev/academic/ufrgs"
+alias unipampa="cd ~/dev/academic/unipampa"
+alias itec="cd ~/dev/professional/itec"
+alias freelance="cd ~/dev/professional/freelance"
 
 # Setting display for wslg
 export DISPLAY=:0
@@ -56,3 +66,9 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+eval "$(/home/pietro-swe/.local/bin/mise activate zsh)" # added by https://mise.run/zsh
+
+source <(fzf --zsh)
+
+eval "$(zoxide init zsh)"
