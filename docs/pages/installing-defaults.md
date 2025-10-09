@@ -106,5 +106,8 @@ chmod +x .dotfiles/install_langs_reqs.sh && .dotfiles/install_langs_reqs.sh
 
 ```sh
 git clone https://github.com/LazyVim/starter ~/.config/nvim
+```
+
+```sh
 rm -rf ~/.config/nvim/.git
 ```
