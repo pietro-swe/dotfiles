@@ -119,9 +119,3 @@ rm -rf ~/.config/nvim/.git
 ```sh
 yay -S texlive gnuplot
 ```
-
-21. Install `pnpm`
-
-```sh
-curl -fsSL https://get.pnpm.io/install.sh | sh -
-```
