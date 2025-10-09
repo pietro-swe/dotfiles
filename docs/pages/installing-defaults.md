@@ -12,7 +12,7 @@ and update the `man` database
 sudo mandb
 ```
 
-2. Change `ParallelDownloads` in `/etc/pacman.conf` to `8`
+2. Change `ParallelDownloads` in `/etc/pacman.conf` to `10`
 
 3. Packages for working with `wslg` (Windows Subsystem For Linux GUI)
 
