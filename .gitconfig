@@ -5,3 +5,16 @@
 	defaultBranch = main
 [pull]
 	rebase = false
+[alias]
+	c = commit
+	ci = commit
+	amend = commit --amend
+	co = checkout
+	br = branch
+	st = status
+	cur = branch --show-current
+	d = diff
+	lg = log --oneline --graph --all --decorate
+	ls = log --oneline --decorate
+	unstage = reset HEAD --
+	last = log -1 HEAD
