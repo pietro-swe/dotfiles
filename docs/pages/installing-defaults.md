@@ -3,7 +3,7 @@
 1. Install basic packages
 
 ```sh
-sudo pacman -S base-devel coreutils git unzip wget openssh neovim htop gdb lldb curl locate tmux whois man-db man-pages
+sudo pacman -S base-devel coreutils git unzip wget openssh neovim htop gdb lldb curl locate tmux whois cronie parallel man-db man-pages
 ```
 
 and update the `man` database
@@ -118,4 +118,10 @@ rm -rf ~/.config/nvim/.git
 
 ```sh
 yay -S texlive gnuplot
+```
+
+21. Install `pnpm`
+
+```sh
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 ```
