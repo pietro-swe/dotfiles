@@ -3,7 +3,7 @@
 1. Install basic packages
 
 ```sh
-sudo pacman -S base-devel coreutils git unzip wget openssh neovim htop gdb curl locate tmux man-db man-pages
+sudo pacman -S base-devel coreutils git unzip wget openssh neovim htop gdb lldb curl locate tmux whois man-db man-pages
 ```
 
 and update the `man` database
@@ -79,7 +79,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 13. Install utils
 
 ```sh
-yay -S bat eza broot fd ripgrep httpie jq tlrc-bin lazydocker navi task fastfetch fzf zoxide fd the_silver_searcher lazygit github-cli
+yay -S bat eza broot ripgrep httpie jq lazydocker navi task fastfetch fzf zoxide fd the_silver_searcher lazygit github-cli procs
 ```
 
 14. Create directory structure
@@ -110,4 +110,12 @@ git clone https://github.com/LazyVim/starter ~/.config/nvim
 
 ```sh
 rm -rf ~/.config/nvim/.git
+```
+
+19. Open `nvim` and run `:Lazy!` to install plugins
+
+20. Install research utils
+
+```sh
+yay -S texlive gnuplot
 ```
