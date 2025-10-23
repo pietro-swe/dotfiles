@@ -31,29 +31,7 @@ fi
 # Remove weird percent symbol at eol
 export PROMPT_EOL_MARK=''
 
-# Personal Aliases
-alias .="cd .."
-alias ..="cd ../.."
-alias ...="cd ../../.."
-alias ....="cd ../../../.."
-alias .....="cd ../../../../.."
-
-alias zshconfig="nvim $HOME/.zshrc"
-alias winhere="explorer.exe ."
-alias bls="eza --color=always --icons=always --long --git --all --no-user"
-alias wttrpoa="curl wttr.in/Porto+Alegre,Brazil"
-alias wttrrg="curl wttr.in/Rio+Grande,Brazil"
-
-alias gbsc="git branch --show-current"
-
-alias dev="cd ~/dev"
-alias med="cd ~/dev/personal"
-alias aed="cd ~/dev/academic"
-alias ped="cd ~/dev/professional"
-alias ufrgs="cd ~/dev/academic/ufrgs"
-alias unipampa="cd ~/dev/academic/unipampa"
-alias itec="cd ~/dev/professional/itec"
-alias freelance="cd ~/dev/professional/freelance"
+source $HOME/.dotfiles/aliases.sh
 
 # Setting display for wslg
 export DISPLAY=:0
