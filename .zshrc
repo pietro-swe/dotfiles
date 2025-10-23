@@ -33,10 +33,9 @@ export PROMPT_EOL_MARK=''
 
 source $HOME/.dotfiles/aliases.sh
 
-# Setting display for wslg
+# Set display for wslg
 export DISPLAY=:0
 
-# Use zsh-autosuggestions
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 eval "$(/home/pietro-swe/.local/bin/mise activate zsh)" # added by https://mise.run/zsh
