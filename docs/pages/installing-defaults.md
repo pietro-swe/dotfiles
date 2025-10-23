@@ -29,7 +29,7 @@ ssh-keygen -t ed25519 -C "email"
 5. `git clone` this repo
 
 ```sh
-git clone git@github.com:marechal-dev/dotfiles.git .dotfiles
+git clone git@github.com:pietro-swe/dotfiles.git .dotfiles
 ```
 
 6. Execute the `setup.sh` to create the symlinks

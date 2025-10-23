@@ -18,7 +18,7 @@ alias unipampa="cd ~/dev/academic/unipampa"
 alias itec="cd ~/dev/professional/itec"
 alias freelance="cd ~/dev/professional/freelance"
 
-# Aliases I stole from omarchy hehe
+# Cool aliases I stole from Omarchy hehe
 zd() {
   if [ $# -eq 0 ]; then
     builtin cd ~ && return

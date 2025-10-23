@@ -18,13 +18,13 @@ echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
 6. Add user
 
 ```sh
-useradd -m -G wheel -s /bin/bash marechal-dev
+useradd -m -G wheel -s /bin/bash pietro-swe
 ```
 
 7. Setup the password and exit
 
 ```sh
-passwd marechal-dev
+passwd pietro-swe
 ```
 
 ```sh
