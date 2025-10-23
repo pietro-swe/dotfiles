@@ -1,3 +1,5 @@
+echo "[Create Dir. Struct.] Starting directory structure creation..."
+
 mkdir ~/dev
 echo "[Create Dir. Struct.] Created ~/dev directory"
 
